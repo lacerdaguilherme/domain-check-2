@@ -379,7 +379,7 @@ check_domain_status()
     elif [ "${TLDTYPE}" == "tr" ];
     then
        REGISTRAR=`cat ${WHOIS_TMP} | ${GREP} "Organization Name" -m 1 | ${AWK} -F: '{print $2}'`
-    elif [ "${TLDTYPE}" == "br" ];
+    elif [ "${TLDTYPE}" == "br" ];  #added .br domains support by lacerdaguilherme 2021-06-21
     then
        REGISTRAR=`cat ${WHOIS_TMP} | ${GREP} "owner:" | ${AWK} -F: '/owner:/ && $2 != "" { getline; REGISTRAR=substr($2,8,47) } END { print REGISTRAR }'`
 
@@ -761,6 +761,29 @@ check_domain_status()
                      *) tmonth=0 ;;
                esac
         tday=`echo ${tdomdate} | ${CUT} -d "-" -f 3`
+        DOMAINDATE=`echo "${tday}-${tmonth}-${tyear}"`
+
+    elif [ "${TLDTYPE}" == "br" ];	# added by lacerdaguilherme 2021-06-21
+    then
+        tdomdate=`cat ${WHOIS_TMP} | ${AWK} '/expires:/ { print $2 }'`
+        tyear=`echo ${tdomdate} | ${AWK} '{ print substr($1,1,4) }'`
+        tmon=`echo ${tdomdate} | ${AWK} '{ print substr($1,5,2) }'`
+               case ${tmon} in
+                     1|01) tmonth=jan ;;
+                     2|02) tmonth=feb ;;
+                     3|03) tmonth=mar ;;
+                     4|04) tmonth=apr ;;
+                     5|05) tmonth=may ;;
+                     6|06) tmonth=jun ;;
+                     7|07) tmonth=jul ;;
+                     8|08) tmonth=aug ;;
+                     9|09) tmonth=sep ;;
+                     10) tmonth=oct ;;
+                     11) tmonth=nov ;;
+                     12) tmonth=dec ;;
+                     *) tmonth=0 ;;
+               esac
+        tday=`echo ${tdomdate} | ${AWK} '{ print substr($1,7,2) }'`
         DOMAINDATE=`echo "${tday}-${tmonth}-${tyear}"`
 
     elif [ "${TLDTYPE}" == "it" ];	# added by nixCraft 07/jan/2019 based upon https://github.com/pelligrag
