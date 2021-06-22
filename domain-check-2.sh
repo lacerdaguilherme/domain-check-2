@@ -379,6 +379,10 @@ check_domain_status()
     elif [ "${TLDTYPE}" == "tr" ];
     then
        REGISTRAR=`cat ${WHOIS_TMP} | ${GREP} "Organization Name" -m 1 | ${AWK} -F: '{print $2}'`
+    elif [ "${TLDTYPE}" == "br" ];
+    then
+       REGISTRAR=`cat ${WHOIS_TMP} | ${GREP} "owner:" | ${AWK} -F: '/owner:/ && $2 != "" { getline; REGISTRAR=substr($2,8,47) } END { print REGISTRAR }'`
+
     elif [ "${TLDTYPE}" == "it" ];
     then
        REGISTRAR=`cat ${WHOIS_TMP} | ${AWK} -F':' '/Registrar/ && $0 != ""  { getline;REGISTRAR=substr($0,16,32) } END { print REGISTRAR }'`    

@@ -7,9 +7,9 @@ Installation:
 Use the curl or wget command to grab script as follows:
 
 ```
-$ wget https://raw.githubusercontent.com/nixcraft/domain-check-2/master/domain-check-2.sh
+$ wget https://raw.githubusercontent.com/lacerdaguilherme/domain-check-2/master/domain-check-2.sh
 ## [ sample domain list for testing purpose ] ##
-$ wget https://raw.githubusercontent.com/nixcraft/domain-check-2/master/domain-list.txt 
+$ wget https://raw.githubusercontent.com/lacerdaguilherme/domain-check-2/master/domain-list.txt 
 ## [ install it in /usr/local/bin dir ] ##
 $ sudo cp -vf domain-check-2.sh /usr/local/bin/domain-check-2
 $ sudo chmod +x /usr/local/bin/domain-check-2.sh
@@ -81,5 +81,5 @@ Usage: domain-check-2.sh [ -e email ] [ -x expir_days ] [ -q ] [ -a ] [ -h ]
 Authors:
 --------
 * Origianl Author: Matty < matty91 at gmail dot com > https://github.com/Matty9191
-* Forked and maitained by nixCraft https://www.cyberciti.biz/tips/domain-check-script.html 
-* I added support and fixed for various C/TLDS.
+* Forked and maintained by nixCraft https://www.cyberciti.biz/tips/domain-check-script.html https://github.com/nixcraft/domain-check-2
+* I added support for .br domains
