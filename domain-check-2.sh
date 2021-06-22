@@ -5,10 +5,13 @@
 #
 # Author: Matty < matty91 at gmail dot com >
 #
-# Current Version: 2.18
-# Last Updated: 07-Jan-2019
+# Current Version: 2.19
+# Last Updated: 21-Jun-2021
 #
 # Revision History:
+#
+# Version 2.19
+#   Added support for .br domain -- Guilherme Lacerda <github.com/lacerdaguilherme>
 #
 #  Version 2.18
 #   Added support for .pro/.mx/.ro/.aero/.asia/.cc/.college domain -- Vivek Gite <github.com/nixcraft>
