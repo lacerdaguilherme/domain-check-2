@@ -19,42 +19,22 @@ Usage:
 ------
 Run it as follows:
 ```
-$ domain-check-2 -d google.com
-$ domain-check-2 -d cyberciti.biz
+$ domain-check-2 -d google.com.br
+$ domain-check-2 -d pop.com.br
 $ domain-check-2 -f domain-list.txt 
 ```
 Sample outputs:
 ```
 Domain                              Registrar                                      Status   Expires     Days Left
 ----------------------------------- ---------------------------------------------- -------- ----------- ---------
-nixcraft.com                        GoDaddy.com, LLC                               Valid    10-may-2023   2022 
-google.org                          MarkMonitor Inc.                               Valid    20-oct-2018   359  
-google.net                          MarkMonitor Inc.                               Valid    15-mar-2018   140  
-google.info                         MarkMonitor Inc.                               Valid    31-jul-2018   278  
-cyberciti.biz                       GoDaddy.com, Inc.                              Valid    30-jun-2024   2439 
-google.in                           MarkMonitor Inc. (R84-AFIN)                    Valid    14-Feb-2018   111  
-google.co.in                        MarkMonitor Inc. (R84-AFIN)                    Valid    23-Jun-2018   240  
-google.us                           MarkMonitor, Inc.                              Valid    18-apr-2018   174  
-google.uk                           Markmonitor Inc.                               Valid    11-Jun-2018   228  
-google.co.uk                        Markmonitor Inc.                               Valid    14-Feb-2018   111  
-google.jp                           Google                                         Valid    31-may-2018   217  
-
-google.cz                           REG-MARKMONITOR                                Valid    22-jul-2018   269  
-google.pl                           Markmonitor, Inc.                              Valid    18-sep-2018   327  
-google.co                           MARKMONITOR, INC.                              Valid    24-Feb-2018   121  
-google.ru                           RU-CENTER-RU                                   Valid    04-mar-2018   129  
-google.blog                         MarkMonitor Inc                                Valid    19-aug-2018   297  
-linux.cafe                          OVH SAS                                        Valid    14-nov-2018   384  
-google.md                           Google Inc.                                    Valid    02-may-2018   188  
-google.co                           MARKMONITOR, INC.                              Valid    24-Feb-2018   121  
-dotmobi.mobi                        CSC Corporate Dom                              Valid    11-may-2018   197  
-google.me                           MarkMonitor Inc.                               Valid    13-jun-2018   230  
-google.us                           MarkMonitor, Inc.                              Valid    18-apr-2018   174  
-google.su                           RUCENTER-SU                                    Valid    15-oct-2018   354  
-youtube.tv                          MARKMONITOR INC.                               Valid    14-aug-2018   292  
-abc.xyz                             MarkMonitor, Inc (TLDs)                        Valid    20-mar-2025   2702 
-google.se                           MarkMonitor Inc                                Valid    20-oct-2018   359  
-google.dk                           DK Hostmaster A/S                              Valid    31-mar-2018   156
+google.com.br                       Google Brasil Internet Ltda                    Valid    18-may-2023   694  
+pop.com.br                          POP Internet LTDA                              Valid    09-aug-2021   47   
+correiodopovo.com.br                Empresa Jornalistica Caldas Junior             Valid    05-mar-2022   255  
+vivo.com.br                         TELEFÔNICA BRASIL S.A                          Valid    11-may-2023   687  
+vivotools.com.br                    POP Internet LTDA                              Valid    07-jan-2024   928  
+pruma.com.br                        Bernardo Sá Barreto Pimentel Trancoso          Valid    28-aug-2021   66   
+terra.com.br                        Terra Networks Brasil S.A.                     Valid    30-nov-2027   2351 
+uol.com.br                          Universo Online S.A.                           Valid    24-apr-2023   670  
 ```
 [Setup Unix/Linux cron job](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/)  as follows to get email notification to send expiration notices:
 
@@ -82,4 +62,4 @@ Authors:
 --------
 * Origianl Author: Matty < matty91 at gmail dot com > https://github.com/Matty9191
 * Forked and maintained by nixCraft https://www.cyberciti.biz/tips/domain-check-script.html https://github.com/nixcraft/domain-check-2
-* I added support for .br domains
+* Added support for .br domains by lacerdaguilherme - 06-2021
